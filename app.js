@@ -65,7 +65,7 @@ app.get('/api/patients/:patientId', async (req, res) => {
     const patient = await Patient.findOne({ _id: req.params.patientId });
     res.json(patient);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Encountered an internal server error' });
   }
 });
 
